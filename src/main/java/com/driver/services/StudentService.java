@@ -1,14 +1,13 @@
 package com.driver.services;
 
-import com.driver.models.Card;
 import com.driver.repositories.StudentRepository;
+import com.driver.models.Card;
 import com.driver.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
-
 
     @Autowired
     CardService cardService4;
@@ -34,6 +33,6 @@ public class StudentService {
 
     public void deleteStudent(int id){
         cardService4.deactivateCard(id);
-//        studentRepository4.deleteCustom(id);
+        studentRepository4.deleteCustom(id);
     }
 }
