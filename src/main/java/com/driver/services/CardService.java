@@ -1,9 +1,9 @@
 package com.driver.services;
 
-import com.driver.models.Student;
 import com.driver.models.Card;
-import com.driver.models.CardStatus;
 import com.driver.repositories.CardRepository;
+import com.driver.models.CardStatus;
+import com.driver.models.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,11 @@ public class CardService {
     CardRepository cardRepository3;
 
     public Card createAndReturn(Student student){
-        Card card = null;
-        //link student with a new card
+        Card card = new Card();
+        //card.setStudent(student);
+        //student.setCard(card);
+
+        //cardRepository3.save(card);
         return card;
     }
 
